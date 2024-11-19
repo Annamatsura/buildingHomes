@@ -1,0 +1,264 @@
+
+
+.wrap {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    /*padding: 0 60px;*/
+    /*background-color: ;*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*overflow: hidden;*/
+    margin: 0 auto;
+}
+
+.wrap:after {
+    content:'';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #25252d;
+}
+
+.slider {
+    position: relative;
+    z-index: 200;
+    padding: 0 0px;
+    margin: 0 auto;
+    max-width: 1044px;
+    width: 100%;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -25px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-family: monospace;
+    font-size: 5rem;
+    z-index: 300;
+    outline: none;
+}
+
+.previous-button {
+    left: -50px;
+    text-align: left;
+    background: transparent;
+    cursor: pointer;
+}
+
+.previous-button svg path{
+    stroke: #ecc66b;
+}
+
+#parrow{
+    transform: rotate(180deg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    left: 14px;
+
+}
+#parrow path{
+    fill: #ecc66b;
+}
+
+.next-button {
+    right: -50px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.next-button svg{
+    fill:  #ecc66b;
+}
+.next-button svg path{
+    stroke:  #ecc66b;
+}
+
+/*.next-button{*/
+/*    position: relative;*/
+/*    border-radius: 50%;*/
+/*    border: 0;*/
+/*    background: transparent;*/
+/*svg{*/
+/*    fill: @YellowText;*/
+/*path{*/
+/*    stroke: @YellowText;*/
+/*}*/
+/*}*/
+#narrow{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    left: 18px;
+}
+
+
+
+.item.slick-slide {
+    width: 555px !important;
+    height: 405px !important;
+    transition: transform .4s;
+    position: relative;
+}
+
+.slick-slide:after {
+    content:'';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background: rgba(0,0,0,.5);*/
+    transition: transform .4s;
+}
+
+.item.slick-slide {
+    transform: scale(0.7)  translate(640px);
+}
+
+.item.slick-slide.slick-center + .slick-slide {
+    transform: scale(0.8) translate(-250px);
+    z-index: 10;
+}
+
+.item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
+    transform: scale(0.7)  translate(-640px);
+    z-index: 5;
+}
+
+.item.slick-slide.slick-active {
+    transform: scale(0.8) translate(250px);
+}
+
+.item.slick-slide.slick-center {
+    /* margin: 0 -10%; */
+    transform: scale(1);
+    z-index: 30;
+}
+
+.slick-center:after {
+    opacity: 0;
+}
+
+.center-text{
+    background-color: #313139;
+    /*width: 588px;*/
+    padding: 15px 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.slider .item img{
+    width: 100%;
+    height: 100%;
+}
+
+.slider .item .center-text{
+    display: none;
+}
+
+.slider .slick-slide.slick-center{
+    position: relative;
+}
+
+.slider .slick-slide.slick-center .center-text{
+    display: flex;
+    position: absolute;
+    width: 83.1%;
+    top: 360px;
+    left: 0;
+}
+
+.center-text .one-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.center-text .one-text .one{
+    font-family: "Museo Sans Cyrl 500", sans-serif;
+    font-size: 18px;
+}
+.center-text .one-text .two{
+    font-family: "Museo Sans Cyrl 300", sans-serif;
+    font-size: 16px;
+}
+
+.center-text .line{
+    border-left: 1px solid white;
+    height: 45px;
+    box-sizing: border-box;
+}
+.slider .slick-slide.slick-center {
+    background-size: contain !important;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    margin-bottom: 45px;
+}
+
+
+.center-text .two-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.center-text .two-text .one{
+    display: flex;
+}
+.center-text .two-text .one .head-one{
+    font-family: "Museo Sans Cyrl 500", sans-serif;
+    font-size: 18px;
+    margin-right: 15px;
+}
+.center-text .two-text .one .head-one .text-one{
+    font-family: "Museo Sans Cyrl 300", sans-serif;
+    font-size: 16px;
+}
+.imfge {
+    max-width: 100%;
+    object-fit: contain;
+    height:405px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+}
+
+.slick-dots li {
+    margin: 0 7px;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 1px solid rgb(236, 198, 107);
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active  {
+    background-color: rgb(236, 198, 107);
+}
+
+
